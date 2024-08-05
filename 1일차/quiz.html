@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body{
+      /* 정렬 및 배치 */
+      display: flex;
+      justify-content: center;  
+      /* 배경 색상을 변경할 수 있어요! */
+      /* background-color: #c3c9c954;  */
+      background-color: white;
+      }    
+    div.contents{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-content: center; 
+      width: 840px;
+    }
+
+    h1.title{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: row; 
+      justify-content: start; 
+      padding: 15px; 
+      margin-bottom: 10px;
+      /* 웹페이지 제목 칸 색상을 바꿀 수 있어요!  */
+      background-color: white; 
+      font-size: larger;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 2px solid #6ad8d3; */
+    }    
+    
+    ul{list-style: none;}
+    li{float: left; }
+    a{
+      padding-right: 30px; 
+      text-decoration: none; 
+      color: black; 
+      font-weight: 600;
+    }
+    /* nav바 */
+    div.nav{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      height: 35px; 
+      margin-bottom: 10px; 
+      background-color: #6ad8d3;
+      text-decoration-line: none;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 3px solid #6ad8d3; */
+    }
+    div.main_quiz{display: flex; flex-direction: column; align-items: center; min-height: 70vh; padding: 50px; background-color: white; border: 3px solid #6ad8d3;}
+    
+    p#intro1{display: flex; text-align: center; font-size: 30px;}
+    p#intro2{display: flex; text-align: center; margin-bottom: 50px;}
+    div#answer_option{display: flex; flex-direction: row; justify-content: space-around;}
+    input#q1_radio{display: flex; flex-direction: row;}
+    div#q1_answer{display: flex; flex-direction: column; align-items: center;}
+    
+    input.input_text{padding: 5px; width: 300px;}
+
+    div.quiz_container{display: flex; flex-direction: column; width: 550px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid gainsboro;}
+
+    div.option{margin-top: 20px; margin-bottom: 20px;}
+    div.answer_container{display: none;}
+    input#real_answer{float: right; padding: 5px; background-color: royalblue; border: none; color: white;}
+    input#real_answer:focus~ div.answer_container{display: block; padding-top: 10px; padding-bottom: 10px; padding-left: 8px; background-color: whitesmoke;}
+    p.answer_is{color: royalblue;}
+    img#profile{width: 100px; border-radius: 100px; border: 2px solid black; margin-bottom: 10px;}
+
+  </style>
+  <title>쌈@뽕한 코쟁이성재의 Web싸이트</title>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <div class="contents">
+
+  <h1 class="title">쌈@뽕한 코쟁이성재의 Web싸이트</h1>
+  <div class="nav">
+    <ul>
+      <li><a href="AboutMe.html">나는! 나는! 장풍을 했다</a></li>
+      <li><a href="AboutLike.html">오옹! 나이수!</a></li>
+      <li><a href="quiz.html">케인아 영양제 먹어라</a></li>
+    </ul>
+  </div>
+  <div class="main_quiz">
+    
+    <p id="intro1"><strong>퀴즈다맨이야</strong> </p>
+    <p id="intro2"><strong>못맞추면 내 코가 더 쌈@뽕하게 커진다맨이야</strong></p>
+    <img src = "코쟁이성재.jpg" width = "500px" height = "300px"></img>
+
+
+    <!-- 1. 라디오버튼을 이용하여 만들어주세요! -->
+    <div class="quiz_container">
+      <div class="question">
+        <p>1. 내 이름은 뭐냐맨이야</p>
+      </div>
+      <div class="option">
+        <div id="answer_option">
+          <div id="q1_answer">
+              <!-- 이미지 넣기를 이용하여 보기 이미지1을 넣어주세요 (id는 "profile") -->
+              <div id="q1_radio">
+                <input type = "radio" name="q1_radio">쉔창자이</input>
+                <input type = "radio" name="q1_radio">신성짜이</input>
+                <input type = "radio" name="q1_radio">신성재</input>
+              </div>
+          </div>
+          <div id="q1_answer">
+              <!-- 이미지 넣기를 이용하여 보기 이미지2를 넣어주세요 (id는 "profile") -->
+              <div id="q1_radio">
+                <!-- input 타입 중 radio를 이용하여 보기2를 만들어주세요 -->
+              </div>
+          </div>
+          <div id="q1_answer">
+              <!-- 이미지 넣기를 이용하여 보기 이미지3을 넣어주세요 (id는 "profile") -->
+              <div id="q1_radio">
+                <!-- input 타입 중 radio를 이용하여 보기3을 만들어주세요 -->
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!! 3번 옹!! 나잇수</strong></p>
+          <p>벌써부터 틀렸으면 좀 실망이다맨이야</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 2. 입력창을 이용하여 만들어주세요! -->
+    <div class="quiz_container">
+      <div class="question">
+        <p>2. 내 취미가 뭐냐맨이야</p>
+      </div>
+      <div class="option">
+        <input type = "text", placeholder="취미를 입력해봐라맨이야"></input>
+      </div>
+
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!! 케인님 방송보기다맨이야</strong></p>
+          <!-- p태그를 이용하여 두 번째 문제의 정답을 써주세요 -->
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- 3. 체크박스를 이용하여 만들어주세요! -->
+    <div class="quiz_container">
+      <div class="question">
+        <p>3. 내 생일의 월과 일을 골라맨이야</p>
+      </div>
+      <div class="option">
+        <input type = "checkbox">1월</input>
+        <input type = "checkbox">4월</input>
+        <input type = "checkbox">7월</input>
+        <input type = "checkbox">2일</input>
+        <input type = "checkbox">15일</input>
+        <input type = "checkbox">22일</input>
+      </div>
+
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!! 1월 15일이다맨이야</strong></p>
+          <!-- p태그를 이용하여 세 번째 문제의 정답을 써주세요 -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+  
+</body>
